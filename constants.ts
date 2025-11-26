@@ -1,0 +1,191 @@
+import { CurrencyCode, CurrencyConfig, Product } from './types';
+
+export const CURRENCIES: Record<CurrencyCode, CurrencyConfig> = {
+  [CurrencyCode.USD]: { code: CurrencyCode.USD, symbol: '$', rate: 1 },
+  [CurrencyCode.EUR]: { code: CurrencyCode.EUR, symbol: '€', rate: 0.92 },
+  [CurrencyCode.GBP]: { code: CurrencyCode.GBP, symbol: '£', rate: 0.79 },
+  [CurrencyCode.INR]: { code: CurrencyCode.INR, symbol: '₹', rate: 83.5 },
+  [CurrencyCode.NZD]: { code: CurrencyCode.NZD, symbol: 'NZ$', rate: 1.65 },
+};
+
+export const CATEGORIES = [
+  'All',
+  'Dresses',
+  'Tops',
+  'Bottoms',
+  'Outerwear',
+  'Activewear',
+  'Swimwear',
+  'Lingerie',
+  'Accessories'
+];
+
+// Generate 20 representative products
+export const PRODUCTS: Product[] = [
+  {
+    id: '1',
+    sku: 'WS-DR-001',
+    name: 'Ethereal Silk Evening Gown',
+    shortDescription: 'A stunning floor-length silk gown perfect for elegant evenings.',
+    price: 299,
+    salePrice: 249,
+    category: 'Dresses',
+    images: ['https://picsum.photos/600/800?random=1', 'https://picsum.photos/600/800?random=101'],
+    sizes: ['XS', 'S', 'M', 'L'],
+    colors: ['Midnight Blue', 'Emerald'],
+    tags: ['evening', 'silk', 'formal'],
+    isNew: true,
+    rating: 4.8,
+    reviewCount: 42
+  },
+  {
+    id: '2',
+    sku: 'WS-TP-002',
+    name: 'Linen Breeze Blouse',
+    shortDescription: 'Breathable linen top for casual summer days.',
+    price: 89,
+    category: 'Tops',
+    images: ['https://picsum.photos/600/800?random=2', 'https://picsum.photos/600/800?random=102'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: ['White', 'Sand', 'Sage'],
+    tags: ['summer', 'casual', 'linen'],
+    rating: 4.5,
+    reviewCount: 128
+  },
+  {
+    id: '3',
+    sku: 'WS-AC-003',
+    name: 'Sculpted Gold Hoops',
+    shortDescription: 'Modern architectural earrings finished in 18k gold.',
+    price: 45,
+    category: 'Accessories',
+    images: ['https://picsum.photos/600/800?random=3'],
+    tags: ['jewelry', 'gold', 'minimal'],
+    rating: 4.9,
+    reviewCount: 310
+  },
+  {
+    id: '4',
+    sku: 'WS-LG-004',
+    name: 'Lace Trim Silk Chemise',
+    shortDescription: 'Luxurious nightwear with delicate lace detailing.',
+    price: 120,
+    category: 'Lingerie',
+    images: ['https://picsum.photos/600/800?random=4'],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Black', 'Champagne'],
+    tags: ['intimate', 'silk'],
+    rating: 4.7,
+    reviewCount: 56
+  },
+  {
+    id: '5',
+    sku: 'WS-OW-005',
+    name: 'Wool Blend Trench Coat',
+    shortDescription: 'Classic structure meets modern warmth.',
+    price: 350,
+    category: 'Outerwear',
+    images: ['https://picsum.photos/600/800?random=5'],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Camel', 'Black'],
+    tags: ['winter', 'coat', 'classic'],
+    isNew: true,
+    rating: 5.0,
+    reviewCount: 12
+  },
+  {
+    id: '6',
+    sku: 'WS-BT-006',
+    name: 'High-Waist Wide Leg Trousers',
+    shortDescription: 'Tailored trousers that offer effortless sophistication.',
+    price: 110,
+    salePrice: 85,
+    category: 'Bottoms',
+    images: ['https://picsum.photos/600/800?random=6'],
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    colors: ['Black', 'Navy'],
+    tags: ['office', 'casual'],
+    rating: 4.6,
+    reviewCount: 89
+  },
+  {
+    id: '7',
+    sku: 'WS-SW-007',
+    name: 'Ribbed One-Piece Swimsuit',
+    shortDescription: 'Flattering cut with textured fabric.',
+    price: 95,
+    category: 'Swimwear',
+    images: ['https://picsum.photos/600/800?random=7'],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Red', 'Black'],
+    tags: ['swim', 'summer'],
+    rating: 4.4,
+    reviewCount: 34
+  },
+  {
+    id: '8',
+    sku: 'WS-AC-008',
+    name: 'Leather Crossbody Bag',
+    shortDescription: 'Essential leather bag for daily use.',
+    price: 180,
+    category: 'Accessories',
+    images: ['https://picsum.photos/600/800?random=8'],
+    colors: ['Tan', 'Black'],
+    tags: ['bag', 'leather'],
+    rating: 4.8,
+    reviewCount: 201
+  },
+  {
+    id: '9',
+    sku: 'WS-DR-009',
+    name: 'Floral Wrap Dress',
+    shortDescription: 'Feminine floral print with a flattering waist tie.',
+    price: 130,
+    category: 'Dresses',
+    images: ['https://picsum.photos/600/800?random=9'],
+    sizes: ['XS', 'S', 'M', 'L'],
+    tags: ['summer', 'floral', 'casual'],
+    rating: 4.7,
+    reviewCount: 156
+  },
+  {
+    id: '10',
+    sku: 'WS-AW-010',
+    name: 'Performance Yoga Set',
+    shortDescription: 'Seamless leggings and sports bra.',
+    price: 75,
+    category: 'Activewear',
+    images: ['https://picsum.photos/600/800?random=10'],
+    sizes: ['S', 'M', 'L'],
+    colors: ['Lilac', 'Grey'],
+    tags: ['gym', 'yoga'],
+    rating: 4.9,
+    reviewCount: 440
+  },
+  {
+    id: '11',
+    sku: 'WS-TP-011',
+    name: 'Oversized Knit Sweater',
+    shortDescription: 'Cozy comfort for chilly evenings.',
+    price: 110,
+    category: 'Tops',
+    images: ['https://picsum.photos/600/800?random=11'],
+    sizes: ['S', 'M', 'L'],
+    tags: ['winter', 'knit'],
+    rating: 4.8,
+    reviewCount: 67
+  },
+  {
+    id: '12',
+    sku: 'WS-BT-012',
+    name: 'Denim Midi Skirt',
+    shortDescription: 'Trendy denim skirt with front slit.',
+    price: 65,
+    category: 'Bottoms',
+    images: ['https://picsum.photos/600/800?random=12'],
+    sizes: ['26', '27', '28', '29', '30'],
+    tags: ['denim', 'casual'],
+    rating: 4.5,
+    reviewCount: 45
+  }
+];
